@@ -13,6 +13,7 @@ export default function Home() {
       <main>
         <h1>LuksaraDecor</h1>
         <p className="tagline">Bold Design, Beautiful Home</p>
+        <p className="subtitle">Experience the difference</p>
         <div className="links">
           <Link href="/about" className="button">
             About Us
@@ -54,9 +55,15 @@ export default function Home() {
         }
         .tagline {
           font-size: 1.5rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           color: #b3b3b3;
           font-weight: 500;
+        }
+        .subtitle {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          color: #808080;
+          font-style: italic;
         }
         .links {
           display: flex;
