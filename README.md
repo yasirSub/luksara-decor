@@ -2,6 +2,7 @@
 
 **Bold Design, Beautiful Home**
 
+<<<<<<< HEAD
 LuksaraDecor is a modern home decor website that offers unique, artisanal products to transform living spaces.
 
 ## Features
@@ -41,3 +42,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deployment
 
 This project is configured for easy deployment to Netlify. 
+=======
+LuksaraDecor is a modern home decor website that offers unique, artisanal products to transform living spaces.
+>>>>>>> 4256062ac1da72656d302d44cd30039f0190128d
