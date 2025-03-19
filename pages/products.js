@@ -5,56 +5,52 @@ export default function Products() {
   const products = [
     {
       id: 1,
-      name: 'Artisan Ceramic Vase',
-      description: 'Handcrafted ceramic vase with unique geometric patterns.',
-      price: '$59.99'
+      name: 'Modern Accent Chair',
+      description: 'Elegant velvet accent chair with gold-finished metal legs',
+      price: '$299.99'
     },
     {
       id: 2,
-      name: 'Minimalist Wall Clock',
-      description: 'Elegant wooden wall clock with a clean, modern design.',
-      price: '$45.99'
+      name: 'Geometric Wall Mirror',
+      description: 'Hexagonal wall mirror with brass frame',
+      price: '$159.99'
     },
     {
       id: 3,
-      name: 'Luxury Throw Blanket',
-      description: 'Soft, hand-woven throw blanket in rich earthy tones.',
-      price: '$79.99'
+      name: 'Ceramic Vase Set',
+      description: 'Set of 3 handcrafted ceramic vases in earth tones',
+      price: '$89.99'
     },
     {
       id: 4,
-      name: 'Decorative Wall Mirror',
-      description: 'Round brass-framed mirror that adds depth and light to any room.',
-      price: '$129.99'
+      name: 'Pendant Light Fixture',
+      description: 'Contemporary black and gold pendant light',
+      price: '$249.99'
     }
   ];
 
   return (
     <div className="container">
       <Head>
-        <title>Products - LuksaraDecor</title>
-        <meta name="description" content="Our Products - LuksaraDecor - Bold Design, Beautiful Home" />
+        <title>Our Products - LuksaraDecor</title>
+        <meta name="description" content="Explore our collection of premium home decor" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1>Our Products</h1>
-        <p className="subtitle">Transforming spaces with bold design</p>
-        
         <div className="products-grid">
-          {products.map(product => (
+          {products.map((product) => (
             <div key={product.id} className="product-card">
               <h2>{product.name}</h2>
               <p className="description">{product.description}</p>
               <p className="price">{product.price}</p>
-              <button className="cta-button">View Details</button>
             </div>
           ))}
         </div>
-        
-        <div className="back-link">
-          <Link href="/" className="button">Back to Home</Link>
-        </div>
+        <Link href="/" className="button">
+          Back to Home
+        </Link>
       </main>
 
       <footer>
@@ -67,101 +63,82 @@ export default function Products() {
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
-          align-items: center;
-          background-color: #f8f5f2;
+          background-color: #121212;
         }
         main {
-          padding: 3rem 0;
+          padding: 5rem 2rem;
           flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
           max-width: 1200px;
+          margin: 0 auto;
           width: 100%;
         }
         h1 {
           font-size: 2.5rem;
-          margin-bottom: 0.5rem;
-          color: #2d2926;
-        }
-        .subtitle {
-          font-size: 1.2rem;
           margin-bottom: 3rem;
-          color: #5e503f;
+          color: #ffffff;
+          text-align: center;
+          text-shadow: 0 0 10px rgba(255,255,255,0.1);
         }
         .products-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 2rem;
           width: 100%;
-          padding: 0 1rem;
           margin-bottom: 3rem;
         }
         .product-card {
-          background: white;
+          background-color: #1e1e1e;
+          border: 1px solid #2c2c2c;
           border-radius: 8px;
           padding: 1.5rem;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-          transition: transform 0.3s, box-shadow 0.3s;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .product-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
         .product-card h2 {
-          font-size: 1.4rem;
-          margin-bottom: 0.8rem;
-          color: #2d2926;
+          font-size: 1.5rem;
+          color: #ffffff;
+          margin-bottom: 1rem;
         }
         .description {
-          color: #5e503f;
-          margin-bottom: 1.5rem;
-          line-height: 1.5;
+          color: #b3b3b3;
+          margin-bottom: 1rem;
+          line-height: 1.6;
         }
         .price {
-          font-size: 1.3rem;
+          color: #4CAF50;
+          font-size: 1.25rem;
           font-weight: 600;
-          color: #a67f5d;
-          margin-bottom: 1.5rem;
-        }
-        .cta-button {
-          background-color: #a67f5d;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          padding: 0.7rem 1.2rem;
-          cursor: pointer;
-          transition: background-color 0.3s;
-          font-weight: 500;
-          width: 100%;
-        }
-        .cta-button:hover {
-          background-color: #8a6343;
-        }
-        .back-link {
-          margin-top: 2rem;
         }
         .button {
-          background-color: #a67f5d;
-          color: white;
+          background-color: #2c2c2c;
+          color: #ffffff;
           border-radius: 4px;
           padding: 0.8rem 1.5rem;
           text-decoration: none;
-          transition: background-color 0.3s;
+          transition: all 0.3s ease;
           font-weight: 500;
+          border: 1px solid #404040;
+          margin-top: 2rem;
         }
         .button:hover {
-          background-color: #8a6343;
+          background-color: #404040;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         footer {
           width: 100%;
           height: 60px;
-          border-top: 1px solid #eaeaea;
+          border-top: 1px solid #2c2c2c;
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #5e503f;
-          margin-top: 2rem;
+          color: #808080;
         }
         @media (max-width: 600px) {
           .products-grid {
